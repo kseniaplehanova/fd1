@@ -4,23 +4,42 @@
 <head>
     <meta charset="utf-8">
     <style>
-    
-       .cell {
-        display:inline-block;
-        border:1px solid red;
-        width:8vw;
-        height:8vw;
-       }
-       .blue {
-         background:blue;
-       }
-    
-    
+    .row {
+  font-size: 0;
+}
+
+.cell {
+   border: 1px solid red;
+   display: inline-block;
+   width: 8vw;
+   height: 8vw;
+   overflow: hidden;
+   font-size: initial;
+   
+}
+.blue {
+  background: blue;
+}
+div .cell:hover {
+  background:gray;
+}
+div:first-child {
+  border:1px solid black;
+}
+
+div:last-child {
+  border:1px solid green;
+}
+div:only-of-type {background:red;}
+
+div:nth-child(3n+2) {
+  border:1px solid yellow;}
+  
     </style>
     </head>
     <body>
       <div>
-  <div>
+  <div class="row">
     <div class="cell"></div>
     <div class="cell">a</div>
     <div class="cell">b</div>
@@ -31,7 +50,7 @@
     <div class="cell">g</div>
     <div class="cell">h</div>
     <div class="cell"></div>
-  <div>
+  <div class="row">
     <div class="cell">1</div>
     <div class="cell blue"></div>
     <div class="cell"></div>
@@ -43,7 +62,7 @@
     <div class="cell"></div>
     <div class="cell">1</div>
   </div>
-  <div>
+  <div class="row">
     <div class="cell ">2</div>
     <div class="cell"></div>
     <div class="cell blue"></div>
@@ -55,7 +74,7 @@
     <div class="cell blue"></div>
     <div class="cell">2</div>
   </div>
-  <div>
+  <div class="row">
     <div class="cell">3</div>
     <div class="cell blue"></div>
     <div class="cell"></div>
@@ -67,7 +86,7 @@
     <div class="cell"></div>
     <div class="cell">3</div>
   </div>
-  <div>
+  <div class="row">
     <div class="cell">4</div>
     <div class="cell"></div>
     <div class="cell blue"></div>
@@ -79,7 +98,7 @@
     <div class="cell blue"></div>
     <div class="cell">4</div>
   </div>
-  <div>
+  <div class="row">
     <div class="cell">5</div>
     <div class="cell blue"></div>
     <div class="cell"></div>
@@ -91,7 +110,7 @@
     <div class="cell"></div>
     <div class="cell">5</div>
   </div>
-  <div>
+  <div class="row">
     <div class="cell">6</div>
     <div class="cell"></div>
     <div class="cell blue"></div>
@@ -103,7 +122,7 @@
     <div class="cell blue"></div>
     <div class="cell">6</div>
   </div>
-  <div>
+  <div class="row">
     <div class="cell">7</div>
     <div class="cell blue"></div>
     <div class="cell"></div>
@@ -115,7 +134,7 @@
     <div class="cell"></div>
     <div class="cell">7</div>
   </div>
-  <div>
+  <div class="row">
     <div class="cell">8</div>
     <div class="cell"></div>
     <div class="cell blue"></div>
@@ -127,7 +146,7 @@
     <div class="cell blue"></div>
     <div class="cell">8</div>
   </div>
-  <div>
+  <div class="row">
     <div class="cell"></div>
     <div class="cell">a</div>
     <div class="cell">b</div>
