@@ -7,7 +7,7 @@
         .chess {
             width: 400px;
             height: 400px;
-            border: 1px;
+            /*border: 1px;*/
             border: 1px solid #999;
         }
 
@@ -17,168 +17,629 @@
             line-height: 40px;
             text-align: center;
             float: left;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        .chess .row:nth-of-type(odd) div:nth-of-type(odd) {
+            background-color: #00f;
+           
+        }
+        
+         .chess .row:nth-of-type(even) div:nth-of-type(even) {
+            background-color: #00f;
+        }
+
+        .chess .row:nth-of-type(2) div:nth-of-type(2)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content: "";
+            background-image: url("491n.png");
+            background-position: -90px -2px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+            
+        }
+        
+        .chess .row:nth-of-type(2) div:nth-of-type(3)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -183px -2px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(2) div:nth-of-type(4)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -136px -0px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(2) div:nth-of-type(5)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -43px 0px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+         .chess .row:nth-of-type(2) div:nth-of-type(6)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: 3px 0px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(2) div:nth-of-type(7)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -136px 0px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(2) div:nth-of-type(8)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -183px -2px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+         .chess .row:nth-of-type(2) div:nth-of-type(9)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content: "";
+            background-image: url("491n.png");
+            background-position: -90px -2px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        .chess .row:nth-of-type(3) div:nth-of-type(2)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content: "";
+            background-image: url("491n.png");
+            background-position: -228px -3px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(3) div:nth-of-type(3)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position:  -228px -3px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(3) div:nth-of-type(4)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position:  -228px -3px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(3) div:nth-of-type(5)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position:  -228px -3px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+         .chess .row:nth-of-type(3) div:nth-of-type(6)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -228px -3px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(3) div:nth-of-type(7)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -228px -3px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(3) div:nth-of-type(8)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -228px -3px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+         .chess .row:nth-of-type(3) div:nth-of-type(9)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content: "";
+            background-image: url("491n.png");
+            background-position:  -228px -3px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        .chess .row:nth-of-type(9) div:nth-of-type(2)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content: "";
+            background-image: url("491n.png");
+            background-position:-90px -46px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+            
+        }
+        
+        .chess .row:nth-of-type(9) div:nth-of-type(3)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -183px -46px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(9) div:nth-of-type(4)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -136px -44px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(9) div:nth-of-type(5)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -44px -44px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+         .chess .row:nth-of-type(9) div:nth-of-type(6)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: 3px -44px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(9) div:nth-of-type(7)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -136px -44px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(9) div:nth-of-type(8)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -183px -46px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+         .chess .row:nth-of-type(9) div:nth-of-type(9)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content: "";
+            background-image: url("491n.png");
+            background-position: -90px -46px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        .chess .row:nth-of-type(8) div:nth-of-type(2)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content: "";
+            background-image: url("491n.png");
+            background-position: -228px -47px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+        }
+        
+        .chess .row:nth-of-type(8) div:nth-of-type(3)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -228px -47px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+            
+        }
+        
+        .chess .row:nth-of-type(8) div:nth-of-type(4)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -228px -47px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(8) div:nth-of-type(5)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -228px -47px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        }
+        
+         .chess .row:nth-of-type(8) div:nth-of-type(6)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -228px -47px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(8) div:nth-of-type(7)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position: -228px -47px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        .chess .row:nth-of-type(8) div:nth-of-type(8)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content:"";
+            background-image: url("491n.png");
+            background-position:-228px -47px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+         .chess .row:nth-of-type(8) div:nth-of-type(9)::before {
+            display:block;
+            height:40px;
+            width:40px;
+            content: "";
+            background-image: url("491n.png");
+            background-position: -228px -47px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        }
+        
+        
+
+       
+
+        .chess .row div:nth-of-type(1),
+        .chess .row div:nth-of-type(10),
+        .chess .row:nth-of-type(1) div,
+        .chess .row:nth-of-type(10) div {
+            background-color: #fff !important;
             /*border: 1px solid black;*/
             /*box-sizing: border-box;*/
         }
+
+        .chess .row div:nth-of-type(1) {
+            border-right: 1px solid red;
+            border-left: none !important;
+            border-top: none !important;
+            border-bottom: none !important;
+            box-sizing: border-box;
+        }
         
-        .chess .row:nth-of-type(2n+1) div:nth-of-type(2n) {
-            background-color: #000;
+
+        .chess .row:nth-of-type(1) div {
+            border-bottom: 1px solid red;
+            border-top: none !important;
+            border-left: none !important;
+            border-right: none !important;
+            box-sizing: border-box;
         }
 
-        .chess .row:nth-of-type(2n) div:nth-of-type(2n+1) {
-            background-color: #000;
-        }
-        
-        .chess .row div:nth-of-type(1), .chess .row div:nth-of-type(10), .chess .row:nth-of-type(1) div, .chess .row:nth-of-type(10) div {
-             background-color: #fff !important;
-             /*border: 1px solid black;*/
-             /*box-sizing: border-box;*/
-        }
-        
-        .chess .row div:nth-of-type(1) {
-            border-right: 1px solid black;
-            border-top: none !important;
-            border-bottom: none !important;
-            box-sizing: border-box;
-        }
-        
-         .chess .row:nth-of-type(1) div{
-            border-bottom: 1px solid black;
+        .chess .row:nth-of-type(10) div {
+            border-top: 1px solid red;
+            border-bottom:none !important;
             border-left: none !important;
             border-right: none !important;
             box-sizing: border-box;
         }
-        
-         .chess .row:nth-of-type(10) div {
-            border-top: 1px solid black;
-            border-left: none !important;
+
+        .chess .row div:nth-of-type(10) {
+            border-left: 1px solid red;
             border-right: none !important;
-            box-sizing: border-box;
-        }
-        
-         .chess .row div:nth-of-type(10) {
-            border-left: 1px solid black;
             border-top: none !important;
             border-bottom: none !important;
             box-sizing: border-box;
         }
-        
+
         .chess .row:nth-of-type(1) div:nth-of-type(2):before {
-            content:"a";
+            content: "a";
         }
-        
-         .chess .row:nth-of-type(1) div:nth-of-type(3):before {
-            content:"b";
+
+        .chess .row:nth-of-type(1) div:nth-of-type(3):before {
+            content: "b";
         }
-         .chess .row:nth-of-type(1) div:nth-of-type(4):before {
-            content:"c";
+
+        .chess .row:nth-of-type(1) div:nth-of-type(4):before {
+            content: "c";
         }
-         .chess .row:nth-of-type(1) div:nth-of-type(5):before {
-            content:"d";
+
+        .chess .row:nth-of-type(1) div:nth-of-type(5):before {
+            content: "d";
+            
         }
-         .chess .row:nth-of-type(1) div:nth-of-type(6):before {
-            content:"e";
+
+        .chess .row:nth-of-type(1) div:nth-of-type(6):before {
+            content: "e";
         }
-         .chess .row:nth-of-type(1) div:nth-of-type(7):before {
-            content:"f";
+
+        .chess .row:nth-of-type(1) div:nth-of-type(7):before {
+            content: "f";
         }
-         .chess .row:nth-of-type(1) div:nth-of-type(8):before {
-            content:"g";
+
+        .chess .row:nth-of-type(1) div:nth-of-type(8):before {
+            content: "g";
         }
-         .chess .row:nth-of-type(1) div:nth-of-type(9):before {
-            content:"h";
+
+        .chess .row:nth-of-type(1) div:nth-of-type(9):before {
+            content: "h";
         }
-        
-        
-        
-        
-        
-         .chess .row:nth-of-type(10) div:nth-of-type(2):before {
-            content:"a";
+
+
+
+
+
+        .chess .row:nth-of-type(10) div:nth-of-type(2):before {
+            content: "a";
         }
-        
-         .chess .row:nth-of-type(10) div:nth-of-type(3):before {
-            content:"b";
+
+        .chess .row:nth-of-type(10) div:nth-of-type(3):before {
+            content: "b";
         }
-         .chess .row:nth-of-type(10) div:nth-of-type(4):before {
-            content:"c";
+
+        .chess .row:nth-of-type(10) div:nth-of-type(4):before {
+            content: "c";
         }
-         .chess .row:nth-of-type(10) div:nth-of-type(5):before {
-            content:"d";
+
+        .chess .row:nth-of-type(10) div:nth-of-type(5):before {
+            content: "d";
         }
-         .chess .row:nth-of-type(10) div:nth-of-type(6):before {
-            content:"e";
+
+        .chess .row:nth-of-type(10) div:nth-of-type(6):before {
+            content: "e";
         }
-         .chess .row:nth-of-type(10) div:nth-of-type(7):before {
-            content:"f";
+
+        .chess .row:nth-of-type(10) div:nth-of-type(7):before {
+            content: "f";
         }
-         .chess .row:nth-of-type(10) div:nth-of-type(8):before {
-            content:"g";
+
+        .chess .row:nth-of-type(10) div:nth-of-type(8):before {
+            content: "g";
         }
-         .chess .row:nth-of-type(10) div:nth-of-type(9):before {
-            content:"h";
+
+        .chess .row:nth-of-type(10) div:nth-of-type(9):before {
+            content: "h";
         }
-        
-        
-        
-        
-        
-         .chess .row:nth-of-type(2) div:nth-of-type(1):before {
-            content:"1";
+
+
+
+
+
+        .chess .row:nth-of-type(2) div:nth-of-type(1):before {
+            content: "1";
         }
-        
-         .chess .row:nth-of-type(3) div:nth-of-type(1):before {
-            content:"2";
+
+        .chess .row:nth-of-type(3) div:nth-of-type(1):before {
+            content: "2";
         }
-         .chess .row:nth-of-type(4) div:nth-of-type(1):before {
-            content:"3";
+
+        .chess .row:nth-of-type(4) div:nth-of-type(1):before {
+            content: "3";
         }
-         .chess .row:nth-of-type(5) div:nth-of-type(1):before {
-            content:"4";
+
+        .chess .row:nth-of-type(5) div:nth-of-type(1):before {
+            content: "4";
         }
-         .chess .row:nth-of-type(6) div:nth-of-type(1):before {
-            content:"5";
+
+        .chess .row:nth-of-type(6) div:nth-of-type(1):before {
+            content: "5";
         }
-         .chess .row:nth-of-type(7) div:nth-of-type(1):before {
-            content:"6";
+
+        .chess .row:nth-of-type(7) div:nth-of-type(1):before {
+            content: "6";
         }
-         .chess .row:nth-of-type(8) div:nth-of-type(1):before {
-            content:"7";
+
+        .chess .row:nth-of-type(8) div:nth-of-type(1):before {
+            content: "7";
         }
-         .chess .row:nth-of-type(9) div:nth-of-type(1):before {
-            content:"8";
+
+        .chess .row:nth-of-type(9) div:nth-of-type(1):before {
+            content: "8";
         }
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         .chess .row:nth-of-type(2) div:nth-of-type(10):before {
-            content:"1";
+            content: "1";
         }
-        
-         .chess .row:nth-of-type(3) div:nth-of-type(10):before {
-            content:"2";
+
+        .chess .row:nth-of-type(3) div:nth-of-type(10):before {
+            content: "2";
         }
-         .chess .row:nth-of-type(4) div:nth-of-type(10):before {
-            content:"3";
+
+        .chess .row:nth-of-type(4) div:nth-of-type(10):before {
+            content: "3";
         }
-         .chess .row:nth-of-type(5) div:nth-of-type(10):before {
-            content:"4";
+
+        .chess .row:nth-of-type(5) div:nth-of-type(10):before {
+            content: "4";
         }
-         .chess .row:nth-of-type(6) div:nth-of-type(10):before {
-            content:"5";
+
+        .chess .row:nth-of-type(6) div:nth-of-type(10):before {
+            content: "5";
         }
-         .chess .row:nth-of-type(7) div:nth-of-type(10):before {
-            content:"6";
+
+        .chess .row:nth-of-type(7) div:nth-of-type(10):before {
+            content: "6";
         }
-         .chess .row:nth-of-type(8) div:nth-of-type(10):before {
-            content:"7";
+
+        .chess .row:nth-of-type(8) div:nth-of-type(10):before {
+            content: "7";
         }
-         .chess .row:nth-of-type(9) div:nth-of-type(10):before {
-            content:"8";
+
+        .chess .row:nth-of-type(9) div:nth-of-type(10):before {
+            content: "8";
         }
     </style>
 </head>
