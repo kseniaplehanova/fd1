@@ -1,0 +1,755 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <title>Шахматы</title>
+ <style>
+  div>div {
+   display: inline-block;
+   position: relative;
+   border: 1px solid red;
+   width: 8vw;
+   height: 8vw;
+   text-align: center;
+   box-sizing: border-box;
+   /*overflow: hidden;*/
+   margin:0;
+   padding:10px;
+  }
+
+
+  div>div:nth-of-type(1) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(2) {
+   border: none;
+  }
+
+  div>div:nth-of-type(3) {
+   left: 0px;
+   border: none;
+  }
+
+  div>div:nth-of-type(4) {
+   left: 0px;
+   border: none;
+  }
+
+  div>div:nth-of-type(5) {
+   left: 0px;
+   border: none;
+  }
+
+  div>div:nth-of-type(6) {
+   left: 0px;
+   border: none;
+  }
+
+  div>div:nth-of-type(7) {
+   left: 0px;
+   border: none;
+  }
+
+  div>div:nth-of-type(8) {
+   left: 0px;
+   border: none;
+  }
+
+  div>div:nth-of-type(9) {
+   left: 0px;
+   border: none;
+  }
+
+  div>div:nth-of-type(10) {
+   left: 0px;
+   border: none;
+  }
+  
+  
+  
+  
+  
+  div>div:nth-of-type(11) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(12) {
+   bottom:-382px;
+   border: none;
+  }
+
+  div>div:nth-of-type(13) {
+   left: 0px;
+   bottom:-382px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(14) {
+   left: 0px;
+   bottom:-382px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(15) {
+   left: 0px;
+   bottom:-382px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(16) {
+   left: 0px;
+   bottom:-382px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(17) {
+   left: 0px;
+   bottom:-382px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(18) {
+   left: 0px;
+   bottom:-382px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(19) {
+   left: 0px;
+   bottom:-382px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(20) {
+   left: 0px;
+   border: none;
+  }
+
+
+
+
+div>div:nth-of-type(21) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(22) {
+   left:-50px;
+    bottom:40px;
+  }
+
+  div>div:nth-of-type(23) {
+   left: -97px;
+   bottom:-40px;
+   
+  }
+
+  div>div:nth-of-type(24) {
+   left: -144px;
+    bottom:-48px;
+   
+  }
+
+  div>div:nth-of-type(25) {
+   left: -193px;
+    bottom:-96px;
+   
+  }
+
+  div>div:nth-of-type(26) {
+   left: -241px;
+    bottom:-144px;
+   
+  }
+
+  div>div:nth-of-type(27) {
+   left: -288px;
+    bottom:-192px;
+   
+  }
+
+  div>div:nth-of-type(28) {
+   left: -335px;
+   bottom:-240px;
+  }
+
+  div>div:nth-of-type(29) {
+   left: -383px;
+   bottom:-287px;
+   
+  }
+
+  div>div:nth-of-type(30) {
+   left: 0px;
+   border: none;
+  }
+  
+  
+  
+  
+  
+  div>div:nth-of-type(31) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(32) {
+  }
+
+  div>div:nth-of-type(33) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(34) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(35) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(36) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(37) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(38) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(39) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(40) {
+   left: 0px;
+   border: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  div>div:nth-of-type(41) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(42) {
+  }
+
+  div>div:nth-of-type(43) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(44) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(45) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(46) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(47) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(48) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(49) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(50) {
+   left: 0px;
+   border: none;
+  }
+  
+  
+  
+  
+  
+  
+  div>div:nth-of-type(51) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(52) {
+  }
+
+  div>div:nth-of-type(53) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(54) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(55) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(56) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(57) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(58) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(59) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(60) {
+   left: 0px;
+   border: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  div>div:nth-of-type(61) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(62) {
+  }
+
+  div>div:nth-of-type(63) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(64) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(65) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(66) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(67) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(68) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(69) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(70) {
+   left: 0px;
+   border: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  div>div:nth-of-type(71) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(72) {
+  }
+
+  div>div:nth-of-type(73) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(74) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(75) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(76) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(77) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(78) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(79) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(80) {
+   left: 0px;
+   border: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  div>div:nth-of-type(81) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(82) {
+  }
+
+  div>div:nth-of-type(83) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(84) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(85) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(86) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(87) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(88) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(89) {
+   left: 0px;
+   
+  }
+
+  div>div:nth-of-type(90) {
+   left: 0px;
+   border: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  div>div:nth-of-type(91) {
+   border: none;
+   /*content: "";*/
+   /*      background-image: url("491n.png");*/
+   /*      background-position: -228px -47px;*/
+   /*      background-size:650%,auto;*/
+   /*      overflow:hidden;*/
+   /*      background-repeat:no-repeat;*/
+  }
+
+  div>div:nth-of-type(92) {
+   border: none;
+  }
+
+  div>div:nth-of-type(93) {
+   left: 0px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(94) {
+   left: 0px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(95) {
+   left: 0px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(96) {
+   left: 0px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(97) {
+   left: 0px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(98) {
+   left: 0px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(99) {
+   left: 0px;
+   border: none;
+   
+  }
+
+  div>div:nth-of-type(100) {
+   left: 0px;
+   border: none;
+  }
+  
+  
+  
+  
+  
+ </style>
+</head>
+
+<body>
+ <div>
+  <div></div>
+  <div>a</div>
+  <div>b</div>
+  <div>c</div>
+  <div>d</div>
+  <div>e</div>
+  <div>f</div>
+  <div>g</div>
+  <div>h</div>
+  <div></div>
+
+  <div></div>
+  <div>a</div>
+  <div>b</div>
+  <div>c</div>
+  <div>d</div>
+  <div>e</div>
+  <div>f</div>
+  <div>g</div>
+  <div>h</div>
+  <div></div>
+
+  <div></div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div></div>
+
+  <div></div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div></div>
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+ </div>
+</body>
+
+</html>

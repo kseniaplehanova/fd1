@@ -1,0 +1,1463 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Шахматы</title>
+    <style>
+        .chess {
+            display: inline-block;
+            position: relative;
+            width: 80vw;
+            height: 80vw;
+            overflow: hidden;
+        
+        }
+        
+        .chess div {
+          width:40px;
+          height:40px;  
+          float:left;
+          border: 1px solid red;
+          text-align: center;
+          box-sizing: border-box;
+        }
+        
+        
+        
+        
+         div>div:nth-of-type(1) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+  }
+        
+    
+        div>div:nth-of-type(2) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+  }
+  
+        div>div:nth-of-type(3) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+  }
+        
+        
+        div>div:nth-of-type(4) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+  }
+  
+  
+  
+        div>div:nth-of-type(5) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+  }
+        
+         div>div:nth-of-type(6) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+  }
+  
+  
+         div>div:nth-of-type(7) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+  }
+  
+  
+  
+  
+        div>div:nth-of-type(8) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+        border: none;
+  }
+  
+ 
+   div>div:nth-of-type(9) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+        border: none;
+  }
+  
+  
+  
+   div>div:nth-of-type(10) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+        border: none;
+  }
+  
+  
+  
+   div>div:nth-of-type(11) {
+         display:block;
+        overflow:hidden;
+        /*border: none;*/
+        position:relative;
+        left: 40px;
+   bottom:-40px;
+   content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+  }
+  
+  
+  div>div:nth-of-type(12) {
+         display:block;
+        overflow:hidden;
+        border: none;
+        position:relative;
+        left:0px;
+   bottom:-320px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(13) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 0px;
+   bottom:-320px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(14) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 0px;
+   bottom:-320px;
+        
+  }
+  
+  
+  div>div:nth-of-type(15) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 0px;
+   bottom:-320px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(16) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 0px;
+   bottom:-320px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(17) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 0px;
+   bottom:-320px;
+        
+  }
+  
+  
+  
+  
+  div>div:nth-of-type(18) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 0px;
+   bottom:-320px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(19) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 0px;
+   bottom:-320px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(20) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+        /*border: none;*/
+        position:relative;
+        left: -320px;
+   bottom:-80px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(21) {
+         background-color:blue;
+         display:block;
+        overflow:hidden;
+        /*border: none;*/
+        position:relative;
+        left: 80px;
+   bottom:0px;
+   content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  
+  
+  
+   div>div:nth-of-type(22) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: -40px;
+        bottom:40px;
+  }
+        
+        
+        
+        
+        
+        
+        div>div:nth-of-type(23) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+        position:relative;
+        left: -80px;
+        bottom:0px;
+  }
+  
+        div>div:nth-of-type(24) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+        position:relative;
+        left: -120px;
+        bottom:-40px;
+  }
+        
+        
+        div>div:nth-of-type(25) {
+        /* display:block;*/
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: -160px;
+        bottom:-80px;
+  }
+  
+  
+  
+        div>div:nth-of-type(26) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+        position:relative;
+        left: -200px;
+        bottom:-120px;
+  }
+        
+         div>div:nth-of-type(27) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+         position:relative;
+        left: -240px;
+        bottom:-160px;
+  }
+  
+  
+         div>div:nth-of-type(28) {
+        /* display:block;*/
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: -280px;
+        bottom:-200px;
+  }
+  
+  
+  
+  
+        div>div:nth-of-type(29) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       border: none;
+        position:relative;
+        left: -320px;
+        bottom:-240px;
+  }
+  
+  
+  
+  
+  
+   div>div:nth-of-type(30) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+        /*border: none;*/
+        position:relative;
+        left: -280px;
+        bottom:-40px;
+  }
+  
+  
+  
+   div>div:nth-of-type(31) {
+       
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+       position:relative;
+        left: 120px;
+        bottom:40px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+  }
+  
+  
+  
+   div>div:nth-of-type(32) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 320px;
+        bottom:80px;
+        
+  }
+  
+  
+  div>div:nth-of-type(33) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 280px;
+        bottom:40px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(34) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 240px;
+        bottom:0px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(35) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 200px;
+        bottom:-40px;
+        
+  }
+  
+  
+  div>div:nth-of-type(36) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 160px;
+        bottom:-80px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(37) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 120px;
+        bottom:-120px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(38) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 80px;
+   bottom:-160px;
+        
+  }
+  
+  
+  
+  
+  div>div:nth-of-type(39) {
+         display:block;
+        overflow:hidden;
+       border: none;
+        position:relative;
+        left: 40px;
+   bottom:-200px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(40) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+        position:relative;
+        left: -240px;
+        bottom:0px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(41) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+        position:relative;
+        left: 160px;
+        bottom:80px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(42) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+        
+  }
+  
+  
+  
+  
+   div>div:nth-of-type(43) {
+       background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+        
+        
+        
+        
+        
+        
+        div>div:nth-of-type(44) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+  
+        div>div:nth-of-type(45) {
+            background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+        
+        
+        div>div:nth-of-type(46) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+  
+  
+  
+        div>div:nth-of-type(47) {
+            background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+        
+         div>div:nth-of-type(48) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+  
+  
+         div>div:nth-of-type(49) {
+             background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+  
+  
+  
+  
+        div>div:nth-of-type(50) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+       position:relative;
+        left: -200px;
+        bottom:40px;
+  }
+  
+  
+  
+  
+  
+   div>div:nth-of-type(51) {
+       
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+       position:relative;
+        left: 200px;
+        bottom:120px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+  }
+  
+  
+  
+   div>div:nth-of-type(52) {
+       background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+  
+  
+  
+   div>div:nth-of-type(53) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+        
+  }
+  
+  
+  div>div:nth-of-type(54) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(55) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+       
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(56) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+        
+  }
+  
+  
+  div>div:nth-of-type(57) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(58) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(59) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+        
+  }
+  
+  
+  
+  
+  div>div:nth-of-type(60) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+        position:relative;
+        left: -160px;
+        bottom:80px;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(61) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+        position:relative;
+        left: 240px;
+   bottom:160px;
+   content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(62) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(63) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+        
+  }
+  
+  
+  
+  
+   div>div:nth-of-type(64) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+        
+        
+        
+        
+        
+        
+        div>div:nth-of-type(65) {
+            background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+  
+        div>div:nth-of-type(66) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+        
+        
+        div>div:nth-of-type(67) {
+            background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+  
+  
+  
+        div>div:nth-of-type(68) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+        
+         div>div:nth-of-type(69) {
+             background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+  }
+  
+  
+         div>div:nth-of-type(70) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+       position:relative;
+        left: -120px;
+        bottom:120px;
+  }
+  
+  
+  
+  
+        div>div:nth-of-type(71) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+       position:relative;
+        left: 280px;
+        bottom:200px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+  }
+  
+  
+  
+  
+  
+   div>div:nth-of-type(72) {
+       background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+       content: "";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+  }
+  
+  
+  
+   div>div:nth-of-type(73) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+        content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+  }
+  
+  
+  
+   div>div:nth-of-type(74) {
+       background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+   content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+  }
+  
+  
+  div>div:nth-of-type(75) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+       content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+       
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(76) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+       content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(77) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+        content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+  }
+  
+  
+  div>div:nth-of-type(78) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+   content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(79) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+   content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(80) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+        position:relative;
+        left: -80px;
+   bottom:160px;
+        
+  }
+  
+  
+  
+  
+  div>div:nth-of-type(81) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+        position:relative;
+        left: 320px;
+        bottom:240px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -217px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(82) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+   content: "";
+            background-image: url("491n.png");
+            background-position:-85px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(83) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+   content:"";
+            background-image: url("491n.png");
+            background-position: -173px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(84) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   /*     position:relative;*/
+   /*     left: 0px;*/
+   /*bottom:-382px;*/
+   content:"";
+            background-image: url("491n.png");
+            background-position: -129px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  
+  
+  
+  
+   div>div:nth-of-type(85) {
+       background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+       content:"";
+            background-image: url("491n.png");
+            background-position: -42px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+  }
+        
+        
+        
+        
+        
+        
+        div>div:nth-of-type(86) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+        content:"";
+            background-image: url("491n.png");
+            background-position: 2px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+  }
+  
+        div>div:nth-of-type(87) {
+            background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+       content:"";
+            background-image: url("491n.png");
+            background-position: -129px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+  }
+        
+        
+        div>div:nth-of-type(88) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+        content:"";
+            background-image: url("491n.png");
+            background-position: -173px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+  }
+  
+  
+  
+        div>div:nth-of-type(89) {
+            background-color:blue;
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+       content: "";
+            background-image: url("491n.png");
+            background-position: -85px -43px;
+            background-size:650%,auto;
+            overflow:hidden;
+            overflow:hidden;
+             background-repeat:no-repeat;
+  }
+        
+         div>div:nth-of-type(90) {
+        /* display:block;*/
+        /*overflow:hidden;*/
+       /*border: none;*/
+       position:relative;
+        left: -40px;
+        bottom:200px;
+  }
+  
+  
+         div>div:nth-of-type(91) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+  }
+  
+  
+  
+  
+        div>div:nth-of-type(92) {
+            background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+       position:relative;
+        left: 0px;
+        bottom:320px;
+        content: "";
+            background-image: url("491n.png");
+            background-position: -85px -2px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+  }
+  
+  
+  
+  
+  
+   div>div:nth-of-type(93) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+       position:relative;
+        left: 0px;
+        bottom:320px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -172px -2px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+  }
+  
+  
+  
+   div>div:nth-of-type(94) {
+       background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+       position:relative;
+        left:0px;
+        bottom:320px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -128px -0px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+  }
+  
+  
+  
+   div>div:nth-of-type(95) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   position:relative;
+        left:0px;
+        bottom:320px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -40px 0px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        
+  }
+  
+  
+  div>div:nth-of-type(96) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+        position:relative;
+        left:0px;
+        bottom:320px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: 2px 0px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(97) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+       position:relative;
+        left:0px;
+        bottom:320px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -128px 0px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+  }
+  
+  
+  
+  div>div:nth-of-type(98) {
+      background-color:blue;
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   position:relative;
+        left:0px;
+        bottom:320px;
+        content:"";
+            background-image: url("491n.png");
+            background-position: -173px -2px;
+            background-size:650%,auto;
+            overflow:hidden;
+             background-repeat:no-repeat;
+        
+  }
+  
+  
+  div>div:nth-of-type(99) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+   position:relative;
+        left:0px;
+        bottom:320px;
+        content: "";
+            background-image: url("491n.png");
+            background-position: -85px -2px;
+            background-size:650%,auto;
+            overflow:hidden;
+            background-repeat:no-repeat;
+        
+  }
+  
+  
+  
+  div>div:nth-of-type(100) {
+         display:block;
+        overflow:hidden;
+       /*border: none;*/
+  
+        
+  }
+  
+  
+  
+  
+  
+  
+          .chess div:nth-of-type(1),
+        .chess div:nth-of-type(10),
+        .chess div:nth-of-type(91),
+        .chess div:nth-of-type(100) {
+            background-color: #fff !important;
+        }
+
+        .chess div:nth-of-type(1) {
+            border-right: none;
+            border-left: none !important;
+            border-top: none !important;
+            border-bottom: none !important;
+            box-sizing: border-box;
+        }
+        
+        
+         .chess div:nth-of-type(10) {
+            border-left:none;
+            border-right: none !important;
+            border-top: none !important;
+            border-bottom: none !important;
+            box-sizing: border-box;
+        }  
+
+        .chess div:nth-of-type(91)  {
+            border-bottom: none;
+            border-top: none !important;
+            border-left: none !important;
+            border-right: none !important;
+            box-sizing: border-box;
+        }
+
+
+        
+        .chess div:nth-of-type(100) {
+            border-left: none;
+            border-right: none !important;
+            border-top: none !important;
+            border-bottom: none !important;
+            box-sizing: border-box;
+        }  
+    
+    </style>
+</head>
+
+<body>
+    <div class="chess">
+        <div></div>
+        <div>a</div>
+        <div>b</div>
+        <div>c</div>
+        <div>d</div>
+        <div>e</div>
+        <div>f</div>
+        <div>g</div>
+        <div>h</div>
+        <div></div>
+
+        <div></div>
+        <div>a</div>
+        <div>b</div>
+        <div>c</div>
+        <div>d</div>
+        <div>e</div>
+        <div>f</div>
+        <div>g</div>
+        <div>h</div>
+        <div></div>
+
+        <div class="row"></div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div></div>
+
+        <div class="row"></div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div></div>
+
+        <div class="row"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="row"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="row"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="row"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="row"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="row"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+</body>
+
+</html>
