@@ -1,0 +1,1343 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        #leftcol {
+            /* Левая колонка*/
+            height: 97px;
+            /* Состыковка с соседним слоем */
+            color: white;
+            /* Цвет текста*/
+            background: #323033;
+            /* Цвет фона левой колонки */
+        }
+
+        #centercol {
+            /* Ширина слоя */
+            height: 97px;
+            /* Состыковка с соседним слоем */
+            color: white;
+            /* Цвет текста*/
+            background: #323033;
+            /* Цвет фона левой колонки */
+        }
+
+
+        #rightcol {
+            /* Правая колонка*/
+            height: 97px;
+            background: #323033;
+            /* Цвет фона правой колонки */
+            margin-left: 400px;
+            /* Отступ слева */
+            color: white;
+            /* Цвет текста*/
+        }
+
+
+
+
+        p {
+            padding: 10px;
+            /* Поля вокруг текста 
+    margin: 0;  /* Убираем отступы */
+        }
+
+        hr {
+            height: 1px;
+            width: 850px;
+            background-color: black;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            margin-left: 0px;
+        }
+
+
+        #main {
+            height: 720px;
+            width: 848px;
+            position: relative;
+        }
+
+
+        #aside {
+            height: 720px;
+            width: 160px;
+        }
+
+
+
+        .sectiontop {
+            width: 160px;
+            height: 306px;
+            float: left;
+            color: white;
+            background: #323033;
+            margin-bottom: 302px;
+        }
+
+        .sectionbottom {
+            width: 160px;
+            height: 112px;
+            float: left;
+            color: white;
+            background: #323033;
+        }
+
+
+
+
+        #section {
+            width: 656px;
+            height: 720px;
+            float: left;
+            position: absolute;
+            left: 192px;
+            top: 0px;
+            /*background-color:red;*/
+        }
+
+
+
+
+        .sections:nth-of-type(1) {
+            width: 656px;
+            height: 176px;
+            float: left;
+            background-color: gray;
+            color: white;
+            margin-bottom: 22px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        .sections {
+            width: 112px;
+            height: 128px;
+            background-color: gray;
+            color: white;
+            display: inline-block;
+            /*float: left;*/
+        }
+
+
+        .sections:nth-of-type(2) {
+            position: absolute;
+            left: 136px;
+            top: 200px;
+        }
+
+        .sections:nth-of-type(3) {
+            position: absolute;
+            left: 272px;
+            top: 200px;
+        }
+
+
+        .sections:nth-of-type(4) {
+            position: absolute;
+            left: 408px;
+            top: 200px;
+        }
+
+
+        .sections:nth-of-type(5) {
+            position: absolute;
+            left: 544px;
+            top: 200px;
+        }
+
+
+        .sections:nth-of-type(6) {
+            position: absolute;
+            left: 0px;
+            top: 352px;
+        }
+
+
+
+        .sections:nth-of-type(7) {
+            position: absolute;
+            left: 136px;
+            top: 352px;
+        }
+
+        .sections:nth-of-type(8) {
+            position: absolute;
+            left: 0px;
+            top: 200px;
+        }
+
+
+        .cellleft {
+            width: 320px;
+            height: 176px;
+            color: white;
+            background: gray;
+            position: absolute;
+            top: 544px;
+        }
+
+        .cellright {
+            width: 320px;
+            height: 176px;
+            color: white;
+            background: gray;
+            position: absolute;
+            left: 336px;
+            top: 544px;
+
+        }
+
+
+
+        #footer {
+            margin-top: 30px;
+            width: 848px;
+            /* Общая ширина колонок */
+            height: 176px;
+        }
+
+
+
+        #left {
+            /* Левая колонка*/
+            width: 256px;
+            /* Ширина слоя */
+            height: 160px;
+            float: left;
+            /* Состыковка с соседним слоем */
+            color: white;
+            /* Цвет текста*/
+            background: #323033;
+            /* Цвет фона левой колонки */
+            margin-right: 32px;
+        }
+
+        #center {
+            /* Левая колонка*/
+            width: 256px;
+            /* Ширина слоя */
+            height: 160px;
+            float: left;
+            /* Состыковка с соседним слоем */
+            color: white;
+            /* Цвет текста*/
+            background: #323033;
+            /* Цвет фона левой колонки */
+            margin-right: 32px;
+        }
+
+
+
+        .right1 {
+            height: 72px;
+            /*width:272px;*/
+            background: #323033;
+            margin-left: 560px;
+            color: white;
+            margin-bottom: 15px;
+
+        }
+
+
+        .right2 {
+            height: 72px;
+            background-color: #323033;
+            margin-left: 560px;
+            color: white;
+
+        }
+
+
+        @media screen and (min-width: 1201px) {
+            #header {
+                width: 848px;
+                /* Общая ширина колонок */
+                height: 97px;
+                margin-bottom: 30px;
+
+            }
+
+
+
+            #leftcol {
+                /* Левая колонка*/
+                width: 102px;
+                /* Ширина слоя */
+                height: 97px;
+                float: left;
+                /* Состыковка с соседним слоем */
+                color: white;
+                /* Цвет текста*/
+                background: #323033;
+                /* Цвет фона левой колонки */
+                margin-right: 29px;
+            }
+
+            #centercol {
+                /* Левая колонка*/
+                width: 240px;
+                /* Ширина слоя */
+                height: 97px;
+                float: left;
+                /* Состыковка с соседним слоем */
+                color: white;
+                /* Цвет текста*/
+                background: #323033;
+                /* Цвет фона левой колонки */
+                margin-right: 29px;
+            }
+
+
+            #rightcol {
+                /* Правая колонка*/
+                height: 97px;
+                width: 450px;
+                background: #323033;
+                /* Цвет фона правой колонки */
+                margin-left: 400px;
+                /* Отступ слева */
+                color: white;
+                /* Цвет текста*/
+            }
+
+
+
+            p {
+                padding: 10px;
+                /* Поля вокруг текста 
+    margin: 0;  /* Убираем отступы */
+            }
+
+            hr {
+                height: 1px;
+                width: 850px;
+                background-color: black;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                margin-left: 0px;
+            }
+
+
+            #main {
+                height: 720px;
+                width: 848px;
+                position: relative;
+            }
+
+
+            #aside {
+                height: 720px;
+                width: 160px;
+            }
+
+
+
+            .sectiontop {
+                width: 160px;
+                height: 306px;
+                float: left;
+                color: white;
+                background: #323033;
+                margin-bottom: 302px;
+            }
+
+            .sectionbottom {
+                width: 160px;
+                height: 112px;
+                float: left;
+                color: white;
+                background: #323033;
+            }
+
+
+
+
+            #section {
+                width: 656px;
+                height: 720px;
+                float: left;
+                position: absolute;
+                left: 192px;
+                top: 0px;
+                /*background-color:red;*/
+            }
+
+
+
+
+            .sections:nth-of-type(1) {
+                width: 656px;
+                height: 176px;
+                float: left;
+                background-color: gray;
+                color: white;
+                margin-bottom: 22px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+
+            .sections {
+                width: 112px;
+                height: 128px;
+                background-color: gray;
+                color: white;
+                display: inline-block;
+                /*float: left;*/
+            }
+
+
+            .sections:nth-of-type(2) {
+                position: absolute;
+                left: 136px;
+                top: 200px;
+            }
+
+            .sections:nth-of-type(3) {
+                position: absolute;
+                left: 272px;
+                top: 200px;
+            }
+
+
+            .sections:nth-of-type(4) {
+                position: absolute;
+                left: 408px;
+                top: 200px;
+            }
+
+
+            .sections:nth-of-type(5) {
+                position: absolute;
+                left: 544px;
+                top: 200px;
+            }
+
+
+            .sections:nth-of-type(6) {
+                position: absolute;
+                left: 0px;
+                top: 352px;
+            }
+
+
+
+            .sections:nth-of-type(7) {
+                position: absolute;
+                left: 136px;
+                top: 352px;
+            }
+
+            .sections:nth-of-type(8) {
+                position: absolute;
+                left: 0px;
+                top: 200px;
+            }
+
+
+            .cellleft {
+                width: 320px;
+                height: 176px;
+                color: white;
+                background: gray;
+                position: absolute;
+                top: 544px;
+            }
+
+            .cellright {
+                width: 320px;
+                height: 176px;
+                color: white;
+                background: gray;
+                position: absolute;
+                left: 336px;
+                top: 544px;
+
+            }
+
+
+
+            #footer {
+                margin-top: 30px;
+                width: 848px;
+                /* Общая ширина колонок */
+                height: 176px;
+            }
+
+
+
+            #left {
+                /* Левая колонка*/
+                width: 256px;
+                /* Ширина слоя */
+                height: 160px;
+                float: left;
+                /* Состыковка с соседним слоем */
+                color: white;
+                /* Цвет текста*/
+                background: #323033;
+                /* Цвет фона левой колонки */
+                margin-right: 32px;
+            }
+
+            #center {
+                /* Левая колонка*/
+                width: 256px;
+                /* Ширина слоя */
+                height: 160px;
+                float: left;
+                /* Состыковка с соседним слоем */
+                color: white;
+                /* Цвет текста*/
+                background: #323033;
+                /* Цвет фона левой колонки */
+                margin-right: 32px;
+            }
+
+
+
+            .right1 {
+                height: 72px;
+                /*width:272px;*/
+                background: #323033;
+                margin-left: 560px;
+                color: white;
+                margin-bottom: 15px;
+
+            }
+
+
+            .right2 {
+                height: 72px;
+                background-color: #323033;
+                margin-left: 560px;
+                color: white;
+
+            }
+
+        }
+
+        @media screen and (min-width:1025px) and (max-width:1200px) {
+           
+           
+           
+            hr1 {
+                width:100%;
+               
+                position:relative;
+                left:0px;
+                top:-20px;
+                
+            }
+            
+            
+            #leftcol {
+                float: left;
+                max-width: 152px;
+                width: 20%;
+            }
+            #centercol {
+                float: left;
+                max-width: 290px;
+                width: 40%;
+                margin-left: 10px;
+            }
+            #rightcol {
+                float: left;
+                max-width: 600px;
+                width: 50%;
+                margin-left: 10px;
+            }
+            #header {
+                height: 110px;
+                clear: both;
+            }
+
+           
+            
+            hr {
+                width:100%;
+                float:left;
+                margin-left:0px;
+                margin-top: -585px;
+            }
+            
+            
+            #main {
+                width: 100%;
+                height: 720px;
+                background: none;
+                position: relative;
+                top:20px;
+
+
+            }
+
+
+            #aside {
+
+                width: 20%;
+                height: auto;
+                background: none;
+                height: 600px;
+                position: relative;
+            }
+
+
+
+            .sectiontop {
+                /*float: left;*/
+                position: absolute;
+                /*max-width: 180px;*/
+                width: 100%;
+                margin-top: 0px;
+            }
+            .sectionbottom {
+                /*max-width: 180px;*/
+                width: 100%;
+                /*float: left;*/
+                position: absolute;
+                margin-top: 610px;
+            }
+            #section {
+                width: 100%;
+                background: none;
+                position: relative;
+                left: 250px;
+                top: -600px;
+            }
+
+            .sections:nth-of-type(1) {
+                width: 70%
+            }
+
+            .sections {
+                width: 112px;
+                height: 128px;
+                background-color: gray;
+                color: white;
+                display: inline-block;
+                float: left;
+            }
+
+
+            .sections:nth-of-type(2) {
+                position: absolute;
+                left: 136px;
+                top: 200px;
+                width:10%;
+                
+            }
+
+            .sections:nth-of-type(3) {
+                position: absolute;
+                left: 272px;
+                top: 200px;
+                width:10%;
+            }
+
+
+            .sections:nth-of-type(4) {
+                position: absolute;
+                left: 408px;
+                top: 200px;
+                width:10%;
+            }
+
+
+            .sections:nth-of-type(5) {
+                position: absolute;
+                left: 544px;
+                top: 200px;
+                width:10%;
+            }
+
+
+            .sections:nth-of-type(6) {
+                position: absolute;
+                left: 0px;
+                top: 352px;
+                width:10%;
+            }
+
+
+
+            .sections:nth-of-type(7) {
+                position: absolute;
+                left: 136px;
+                top: 352px;
+                width:10%;
+            }
+
+            .sections:nth-of-type(8) {
+                position: absolute;
+                left: 0px;
+                top: 200px;
+                width:10%;
+            }
+
+
+            .cellleft {
+                width: 27%;
+                height: 176px;
+                color: white;
+                background: gray;
+                position: absolute;
+                top: 544px;
+            }
+
+            .cellright {
+                width: 40%;
+                height: 176px;
+                color: white;
+                background: gray;
+                position: absolute;
+                left: 336px;
+                top: 544px;
+
+            }
+
+
+
+            
+ #footer {
+                margin-top: 50px;
+                width: 100%;
+                /* Общая ширина колонок */
+                height: 176px;
+                background:none;
+            }
+
+
+
+            #left {
+                /* Левая колонка*/
+                width: 25%;
+                /* Ширина слоя */
+                height: 160px;
+                float: left;
+                /* Состыковка с соседним слоем */
+                
+                margin-right: 32px;
+                margin-top:-550px;
+            }
+
+            #center {
+                /* Левая колонка*/
+                width: 25%;
+                /* Ширина слоя */
+                height: 160px;
+                float: left;
+                /* Состыковка с соседним слоем */
+                
+                margin-left: 300px;
+                margin-top:-550px;
+            }
+
+
+
+            .right1 {
+                height: 72px;
+                width:38%;
+               
+                margin-left: 610px;
+                
+                margin-bottom: 15px;
+               position:absolute;
+
+            }
+
+
+            .right2 {
+                height: 72px;
+                width:38%;
+                
+                margin-left: 610px;
+                 margin-top: 90px;
+                  position:absolute;
+                
+
+            }
+
+        }
+
+        @media screen and (min-width:641px) and (max-width:1024px) {
+            #header {
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: 10px;
+                background: none;
+            }
+            #centercol {
+                display: none;
+            }
+            #leftcol {
+                max-width: 30%;
+                width: 50%;
+                float: left;
+                background: gray;
+
+            }
+
+            #rightcol {
+                max-width: 65%;
+                width: 97%;
+                margin-left: 15px;
+                float: left;
+                background: gray;
+
+            }
+
+            hr1 {
+                display: none;
+
+            }
+
+            .sectiontop {
+                width: 97%;
+                margin-top: 0px;
+                height: 112;
+                background: gray;
+            }
+
+            #main {
+                width: 100%;
+                height: 450px;
+                background: none;
+                position: relative;
+            }
+
+
+            #aside {
+                width: 100%;
+                height: 112px;
+                background: none;
+            }
+
+            .sectionbottom {
+                width: 97%;
+                margin-top: 150px;
+                background: none;
+                border: 1px solid black;
+                color: black;
+            }
+
+
+            #section {
+
+                margin-top: 125px;
+                margin-left: -192px;
+                width: 100%;
+                height: 1000px;
+                background: none;
+                overflow: hidden;
+
+
+
+            }
+
+            .sections:nth-of-type(1) {
+                display: none;
+
+            }
+
+
+            .sections:nth-of-type(2) {
+
+                max-width: 50%;
+                width: 30%;
+                max-height: auto;
+                margin-left: -135px;
+                float: left;
+                margin-top: -200px;
+            }
+
+            .sections:nth-of-type(3) {
+                width: 30%;
+                max-width: 50%;
+
+                margin-left: -50px;
+                margin-top: -200px;
+
+            }
+
+
+            .sections:nth-of-type(4) {
+                width: 30%;
+                max-width: 97%;
+                float: left;
+                margin: 30px;
+                margin-top: -200px;
+
+            }
+
+
+            .sections:nth-of-type(5) {
+                width: 30%;
+                max-width: 50%;
+                float: left;
+                margin-left: -544px;
+                margin-top: -50px;
+            }
+
+
+            .sections:nth-of-type(6) {
+                width: 30%;
+                max-width: 50%;
+                clear: both;
+                margin-left: 220px;
+                margin-top: -200px;
+
+            }
+
+
+
+            .sections:nth-of-type(7) {
+                width: 30%;
+                max-width: 50%;
+                float: left;
+                margin-left: 300px;
+                margin-top: -200px;
+            }
+
+            .sections:nth-of-type(8) {
+                width: 30%;
+                max-width: 97%;
+                /*float:left;*/
+                /*margin-left: 135px;*/
+                /*margin-top: 100px;*/
+                position: absolute;
+                left: 0px;
+                top: 300px;
+            }
+
+            hr {
+                width: 97%;
+                float: left;
+                top: -200px;
+            }
+            .cellleft {
+                width: 97%;
+                height: 112px;
+                float: left;
+                top: 590px;
+                background: gray;
+            }
+
+            .cellright {
+                width: 97%;
+                height: 112px;
+                float: left;
+                left: 0px;
+                top: 720px;
+                background: gray;
+
+            }
+
+
+
+            #footer {
+                margin-top: 490px;
+                width: 100%;
+                /* Общая ширина колонок */
+                height: 200px;
+                background: none;
+            }
+
+
+
+            #left {
+                /* Левая колонка*/
+                width: 97%;
+                /* Ширина слоя */
+                height: 112px;
+                float: left;
+                /* Состыковка с соседним слоем */
+                margin-top: -60px;
+                background: gray;
+            }
+
+            #center {
+                /* Левая колонка*/
+                width: 97%;
+                /* Ширина слоя */
+                height: 112px;
+                float: left;
+                /* Состыковка с соседним слоем */
+                margin-top: 20px;
+                background: gray;
+            }
+
+
+
+            .right1 {
+                display: none;
+
+            }
+
+
+            .right2 {
+                display: none;
+
+            }
+
+        }
+
+
+
+
+        @media screen and (max-width:640px) {
+
+
+            #header {
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: 10px;
+                background: none;
+            }
+
+            #leftcol {
+                width: 100%;
+                background: gray;
+                color: black;
+                border: 1px solid black;
+            }
+
+            #centercol {
+                display: none;
+            }
+
+
+            #rightcol {
+                /* Правая колонка*/
+                margin-top: 10px;
+                width: 100%;
+                margin-left: 0px;
+                /* Отступ слева */
+                background: gray;
+                color: black;
+                border: 1px solid black;
+
+            }
+
+
+
+            #main {
+                /*height: 720px;*/
+                width: 100%;
+                position: relative;
+            }
+
+
+            #aside {
+                /*height: 720px;*/
+                width: 100%;
+            }
+
+
+
+            .sectiontop {
+                width: 100%;
+                height: 306px;
+                float: left;
+                color: black;
+                background: white;
+                border: 1px solid black;
+                margin-top: 1460px;
+            }
+            .sectionbottom {
+                display: none;
+            }
+
+
+
+
+            #section {
+                width: 100%;
+                height: 1460px;
+                float: left;
+                position: absolute;
+                left: 0px;
+                background-color: lightgray;
+            }
+
+
+
+
+            .sections:nth-of-type(1) {
+                width: 100%;
+                height: 300px;
+                background-color: gray;
+                color: black;
+                border: 1px solid black;
+
+            }
+
+            .sections {
+                width: 112px;
+                height: 128px;
+                background-color: gray;
+                color: black;
+                display: inline-block;
+                /*float: left;*/
+            }
+
+
+            .sections:nth-of-type(2) {
+                /*position: absolute;*/
+                float: left;
+                left: 280px;
+                top: 310px;
+                width: 200px;
+                height: 200px;
+                background: white;
+                border-radius: 100px;
+                border: 1px solid black;
+            }
+
+            .sections:nth-of-type(3) {
+                left: 10px;
+                top: 520px;
+                width: 200px;
+                height: 200px;
+                background: white;
+                border-radius: 200px;
+                border-radius: 200px;
+                border-radius: 200px;
+                border: 1px solid black;
+            }
+
+
+            .sections:nth-of-type(4) {
+                position: absolute;
+                left: 280px;
+                top: 520px;
+                width: 200px;
+                height: 200px;
+                background: white;
+                border-radius: 200px;
+                border-radius: 200px;
+                border-radius: 200px;
+                border: 1px solid black;
+            }
+
+
+            .sections:nth-of-type(5) {
+                position: absolute;
+                left: 10px;
+                top: 730px;
+                width: 200px;
+                height: 200px;
+                background: white;
+                border-radius: 200px;
+                border-radius: 200px;
+                border-radius: 200px;
+                border: 1px solid black;
+            }
+
+
+            .sections:nth-of-type(6) {
+                position: absolute;
+                left: 280px;
+                top: 730px;
+                width: 200px;
+                height: 200px;
+                background: white;
+                border-radius: 200px;
+                border-radius: 200px;
+                border-radius: 200px;
+                border: 1px solid black;
+            }
+
+
+
+            .sections:nth-of-type(7) {
+                position: absolute;
+                left: 10px;
+                top: 940px;
+                width: 200px;
+                height: 200px;
+                background: white;
+                border-radius: 200px;
+                border-radius: 200px;
+                border-radius: 200px;
+                border: 1px solid black;
+            }
+
+            .sections:nth-of-type(8) {
+                position: absolute;
+                left: 10px;
+                top: 310px;
+                width: 200px;
+                height: 200px;
+                background: white;
+                border-radius: 200px;
+                border-radius: 200px;
+                border-radius: 200px;
+                border: 1px solid black;
+            }
+
+
+            .cellleft {
+                width: 100%;
+                height: 140px;
+                color: black;
+                background: white;
+                border: 1px solid black;
+                position: absolute;
+                top: 1160px;
+            }
+
+            .cellright {
+                width: 100%;
+                height: 120px;
+                color: black;
+                background: white;
+                border: 1px solid black;
+                position: absolute;
+                left: 0px;
+                top: 1320px;
+
+            }
+
+
+
+            #footer {
+                margin-top: 1048px;
+                width: 100%;
+                /* Общая ширина колонок */
+                height: 88px;
+                background: lightgray;
+            }
+
+
+
+            #left {
+                display: none;
+            }
+
+            #center {
+                display: none;
+            }
+
+
+
+            .right1 {
+                max-width: 48%;
+                width: 50%;
+                background: white;
+                color: black;
+                border: 1px solid black;
+                float: left;
+                margin-left: 0px;
+                color: black;
+                margin-top: -290px;
+
+            }
+
+
+            .right2 {
+                max-width: 48%;
+                width: 50%;
+                background-color: white;
+                border: 1px solid black;
+                margin-left: 280px;
+                margin-top: -290px;
+                color: black;
+                float: left;
+
+            }
+
+            hr {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="header">
+            <div id="leftcol">
+                <p>1</p>
+            </div>
+            <div id="centercol">
+                <p>2</p>
+            </div>
+            <div id="rightcol">
+                <p>3</p>
+            </div>
+            <hr1></hr1>
+        </div>
+        <div id="main">
+
+            <div id="aside">
+                <div class="sectiontop">
+                    <ul>4</ul>
+                </div>
+                <div class="sectionbottom">
+                    <p>7</p>
+                </div>
+            </div>
+            <div id="section">
+                <div class="sections">
+                    <ul>5</ul>
+                </div>
+                <div class="sections">
+                    <ul>6</ul>
+                </div>
+                <div class="sections">
+                    <ul>6</ul>
+                </div>
+                <div class="sections">
+                    <ul>6</ul>
+                </div>
+                <div class="sections">
+                    <ul>6</ul>
+                </div>
+                <div class="sections">
+                    <ul>6</ul>
+                </div>
+                <div class="sections">
+                    <ul>6</ul>
+                </div>
+                <div class="sections">
+                    <ul>6</ul>
+                </div>
+                <div class="cellleft">
+                    <ul>8</ul>
+                </div>
+                <div class="cellright">
+                    <ul>9</ul>
+                </div>
+            </div>
+            <hr></hr>
+        </div>
+        <div id="footer">
+            <div id="left">
+                <p>10</p>
+            </div>
+            <div id="center">
+                <p>11</p>
+            </div>
+            <div class="right1">
+                <p>12</p>
+            </div>
+            <div class="right2">
+                <p>13</p>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
