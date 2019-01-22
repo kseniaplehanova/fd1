@@ -1,0 +1,161 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+      * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+.wrapper {
+	height: 100px;
+	margin: 100px auto 0;
+	position: relative;
+	width: 300px;
+	
+}
+
+.slider {
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+	width: 300px;
+	
+}
+
+.slides {
+	height:100px;
+	opacity: 0;
+	position: absolute;
+	width: 300px;
+	
+}
+
+.slide1 { background:red;
+}
+.slide2 { background:blue;
+}
+.slide3 { background:green; 
+	
+}
+
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3 {
+	opacity: 1;
+	
+}
+
+
+
+
+
+.wrapper > input {
+	display: none;
+	
+}
+
+.wrapper .controls {
+	left: 50%;
+	margin-left:-30px;
+	position: absolute;
+	
+}
+
+
+
+.wrapper label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3) {
+	/*background:gray;*/
+	margin-top:10px;
+}
+
+.button-slid{
+  text-align:center;
+}
+label{  
+  bottom:0px;
+  display:inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius:50%;
+  border:4px solid #ccc;
+}
+
+label:before{
+  position:absolute;
+  left:-120px;
+  top:-70px;
+  display:none;
+  content:'<';
+  font-size:40px;
+  color:white;
+  height: 20px;
+  width: 20px;
+  border-radius:50%;
+  
+}
+label:after{
+  position: absolute;
+  right:-110px;
+  top:-70px;
+  display:none;
+  content:'>';
+  font-size:40px;
+  color:white;
+  height: 20px;
+  width: 20px;
+  border-radius:50%;
+  
+}
+ 
+#slide1:checked ~ .controls label:nth-child(1),
+#slide2:checked ~ .controls label:nth-child(2),
+#slide3:checked ~ .controls label:nth-child(3){
+  background:gray;
+}
+#slide1:checked ~ .controls label:nth-child(2):after,
+#slide1:checked ~ .controls label:nth-child(3):before,
+#slide2:checked ~ .controls label:nth-child(3):after,
+#slide2:checked ~ .controls label:nth-child(1):before,
+#slide3:checked ~ .controls label:nth-child(1):after,
+#slide3:checked ~ .controls label:nth-child(2):before{
+  display:block;  
+}
+
+    </style>
+</head>
+
+<body>
+   <div class="wrapper">
+	<input type="radio" name="point" id="slide1" checked>
+	<input type="radio" name="point" id="slide2">
+	<input type="radio" name="point" id="slide3">
+	<div class="slider">
+		<div class="slides slide1"></div>
+		<div class="slides slide2"></div>
+		<div class="slides slide3"></div>
+		
+	</div>
+	<div class="controls">
+		<label for="slide1"></label>
+		<label for="slide2"></label>
+		<label for="slide3"></label>
+		
+
+    
+   
+</div>
+</div>
+</body>
+
+</html>
