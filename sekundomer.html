@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+    
+html, body,*
+{
+    margin: 0;
+    padding: 0;
+}
+img, fieldset
+{
+    border: 0;
+}
+
+img
+{
+    max-width: 100% !important;
+    height: auto;
+    width: auto\9; /* for fucking Ie8 */
+}
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{ 
+    display: block;
+}
+/* focus */
+a, input[type="submit"], input[type="button"], *:focus
+{
+    outline: none;
+}
+table
+{
+    border-spacing: 0;
+}
+/************************************************************************************
+DEFAULT
+*************************************************************************************/
+body, html
+{
+    background: #fff;
+    font-family: Arial;
+    min-width: 400px;
+}
+.container
+{
+    width: 330px;
+    margin: 100px auto;
+}
+/***************** timer design **********************8/
+
+/****** paint body */
+.timerBody,.timerFront, .timerInner, .timerFace
+{
+    border-radius: 100%;
+    position: absolute;
+}
+.timerBody
+{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    margin: 100px auto 0;
+    z-index: 2;
+    
+}
+.timerFront, .timerInner, .timerFace
+{
+    width: 340px;
+    height: 340px;
+    top: 5px;
+    left: 5px;
+}
+.timerInner
+{
+    width: 320px;
+    height: 320px;
+    top: 10px;
+    left: 10px;
+    overflow: hidden;
+}
+.timerFace
+{
+    width: 300px;
+    height: 300px;
+    top: 10px;
+    left: 10px;
+}
+.timerStek
+{
+    border-radius: 100% 100% 100% 100%;
+    box-shadow: -75px -300px 0 -209px rgba(255, 255, 255, 0.1);
+    height: 700px;
+    left: -115px;
+    position: absolute;
+    top: 110px;
+    width: 700px;
+    z-index: 20;
+}
+.start, .pause, .stop
+{
+    display: block;
+    z-index: 13;
+    position: absolute;
+    top: -75px;
+    width:40px;
+    height: 35px;
+    left: 50%;
+    margin-left: -20px;
+    background: green;
+    
+}
+/*.start::before, .pause::before, .stop::before*/
+/*{*/
+/*    content: "";*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    top: 35px;*/
+/*    width:30px;*/
+/*    height: 36px;*/
+/*    z-index: -1;*/
+/*    left: 5px;*/
+    
+/*}*/
+.start:active, .pause:active
+{
+    top: -60px;
+}
+.start:active::after, .pause:active::after
+{
+    content: "";
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: -15px;
+}
+.start:active::before, .pause:active::before
+{
+    height: 21px;
+}
+.pause
+{
+    display: none;
+}
+.start:target
+{
+    display: none;
+}
+.start:target + .pause
+{
+    display: block;
+}
+.stop
+{
+    left: 10px;
+    top: 10px;
+    margin: 0;
+    width:30px;
+    height: 25px;
+    background: red;
+    
+}
+.stop:before
+{
+    width: 20px;
+    height: 20px;
+    top: 25px;
+}
+.stop:active
+{
+    top: 15px;
+    left: 15px;
+}
+.stop:active::after
+{
+    content: "";
+    width: 30px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+.stop:active::before
+{
+    height: 13px;
+}
+/****** numbers design */
+.timer
+{
+    background:white;
+    left: 15px;
+    overflow: hidden;
+    position: absolute;
+    top: 190px;
+    width: 270px;
+    border:1px solid black;
+}
+.timer div
+{
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+}
+.numb::before
+{
+    content:"0 1 2 3 4 5 6 7 8 9 0";
+    position: absolute;
+    width: 30px;
+    height: 360px;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: Arial, sans-serif;
+    color:black;
+    text-align: center;
+    left: 0;
+    top: 0;
+}
+.timer div::after
+{
+    content: "";
+    position: absolute;
+    height: 360px;
+    width: 1px;
+    left: 0;
+    background:black;
+}
+.timer div:first-child::after
+{
+    display: none;
+}
+/****** clock design */
+.clock
+{
+    border-radius: 100%;
+    border:1px solid black;
+    height: 150px;
+    left: 76px;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    width: 150px;
+}
+/*.clock::before*/
+/*{*/
+/*    background:;*/
+/*    border: 1px solid black;*/
+/*    border-radius: 100%;*/
+/*    content: "";*/
+/*    height: 120px;*/
+/*    left: 14px;*/
+/*    position: absolute;*/
+/*    top: 14px;*/
+/*    width: 120px;*/
+/*}*/
+.line
+{
+    width: 1px;
+    height: 100%;
+    background: #777;
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left:-1px;
+}
+/*.line::before*/
+/*{*/
+/*    width: 1px;*/
+/*    height: 100%;*/
+/*    background: #777;*/
+/*    position: absolute;*/
+/*    top:0;*/
+/*    left: 50%;*/
+/*    margin-left: -1px;*/
+/*    transform: rotate(35deg);*/
+/*    content: "";*/
+/*    background:green;*/
+/*}*/
+.one
+{
+    transform: rotate(30deg);
+    
+}
+    .one::before, .one::after
+{
+    content: "5";
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    color: #777;
+    top: 8px;
+    left: -9px;
+    z-index: 11;
+    display: block;
+    position: absolute;
+    transform: rotate(-30deg);
+}
+.one::after
+{
+    content: "35";
+    top: auto;
+    bottom: 8px;
+}
+    
+    
+.two {
+    transform: rotate(60deg);
+    
+}
+.two::before, .two::after
+{
+    content: "10";
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    color: #777;
+    top: 8px;
+    left: -9px;
+    z-index: 11;
+    display: block;
+    position: absolute;
+    transform: rotate(-60deg);
+}
+.two::after
+{
+    content: "40";
+    top: auto;
+    bottom: 8px;
+}
+.three
+{
+    transform: rotate(90deg);
+    
+   
+}
+
+
+.three::before, .three::after
+{
+    content: "15";
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    color: #777;
+    top: 8px;
+    left: -9px;
+    z-index: 11;
+    display: block;
+    position: absolute;
+    transform: rotate(-90deg);
+}
+.three::after
+{
+    content: "45";
+    top: auto;
+    bottom: 8px;
+}
+.four {
+    transform: rotate(120deg);
+    
+}
+
+.four::before, .four::after
+{
+    content: "20";
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    color: #777;
+    top: 8px;
+    left: -9px;
+    z-index: 11;
+    display: block;
+    position: absolute;
+    transform: rotate(-120deg);
+}
+.four::after
+{
+    content: "50";
+    top: auto;
+    bottom: 8px;
+}
+.five
+{
+    
+    /*background: transparent;*/
+}
+
+.five::before, .five::after
+{
+    content: "0";
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    color: #777;
+    top: 8px;
+    left: -9px;
+    z-index: 11;
+    display: block;
+    position: absolute;
+    transform: none;
+}
+.five::after
+{
+    content: "30";
+    top: auto;
+    bottom: 8px;
+}
+.sixt {
+    transform: rotate(150deg);
+}
+
+.sixt::before, .sixt::after
+{
+    content: "25";
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    color: #777;
+    top: 8px;
+    left: -9px;
+    z-index: 11;
+    display: block;
+    position: absolute;
+    transform: rotate(-150deg);
+}
+.sixt::after
+{
+    content: "55";
+    top: auto;
+    bottom: 8px;
+}
+.arrow
+{
+   animation-delay: 0;   
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-duration: 600s;
+   width: 20px;
+   height: 20px;
+   border-radius: 100%;
+   left: 50%;
+   top: 50%;
+   margin: -10px;
+   background:#666;
+   position: absolute;
+   z-index: 12;
+}
+.arrow::before
+{
+    height: 100px;
+    position: absolute;
+    width: 2px;
+    left: 50%;
+    margin-left: -1px;
+    bottom: -20px;
+    background: #666;
+    content: "";
+}
+.arrow::after
+{
+    content: "";
+    border: 4px solid;
+    border-color: transparent transparent #666;
+    position: absolute;
+    margin-left:-4px;
+    left: 50%;
+    top: -65px;
+}
+/********************** timer animation *************************/
+.numb
+{
+   animation-delay: 0;   
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
+.tenHour 
+{
+    animation-duration: 1000000s;
+    
+}
+.hour 
+{
+    animation-duration: 100000s;
+    
+}
+.tenMin 
+{
+    animation-duration: 10000s;
+}
+.min 
+{
+    animation-duration: 1000s;
+   
+}
+.tenSec 
+{
+    animation-duration: 100s;
+}
+.sec 
+{
+    animation-duration: 10s;
+}
+.tenMilisec 
+{
+    animation-duration: 1s;
+}
+.milisec 
+{
+    animation-duration: .1s;
+}
+
+@-moz-keyframes timer
+{
+    0% {top:0}
+    9% {top:0}
+    10% {top:-30px}
+    19% {top:-30px}
+    20% {top:-60px}
+    29% {top:-60px}
+    30% {top:-90px}
+    39% {top:-90px}
+    40% {top:-120px}
+    49% {top:-120px}
+    50% {top:-150px}
+    59% {top:-150px}
+    60% {top:-180px}
+    69% {top:-180px}
+    70% {top:-210px}
+    79% {top:-210px}
+    80% {top:-240px}
+    89% {top:-240px}
+    90% {top:-270px}
+    99% {top:-270px}
+    100% {top:-300px;}
+}
+@-moz-keyframes timertenSec
+{
+    0% {top:0}
+    9.9% {top:0}
+    10% {top:-30px}
+    19.9% {top:-30px}
+    20% {top:-60px}
+    29.9% {top:-60px}
+    30% {top:-90px}
+    39.9% {top:-90px}
+    40% {top:-120px}
+    49.9% {top:-120px}
+    50% {top:-150px}
+    59.9% {top:-150px}
+    60% {top:-180px}
+    69.9% {top:-180px}
+    70% {top:-210px}
+    79.9% {top:-210px}
+    80% {top:-240px}
+    89.9% {top:-240px}
+    90% {top:-270px}
+    99.9% {top:-270px}
+    100% {top:-300px;}
+}
+@-moz-keyframes timerMin
+{
+    0% {top:0}
+    9.99% {top:0}
+    10% {top:-30px}
+    19.99% {top:-30px}
+    20% {top:-60px}
+    29.99% {top:-60px}
+    30% {top:-90px}
+    39.99% {top:-90px}
+    40% {top:-120px}
+    49.99% {top:-120px}
+    50% {top:-150px}
+    59.99% {top:-150px}
+    60% {top:-180px}
+    69.99% {top:-180px}
+    70% {top:-210px}
+    79.99% {top:-210px}
+    80% {top:-240px}
+    89.99% {top:-240px}
+    90% {top:-270px}
+    99.99% {top:-270px}
+    100% {top:-300px;}
+}
+@-moz-keyframes timertenMin
+{
+    0% {top:0}
+    9.999% {top:0}
+    10% {top:-30px}
+    19.999% {top:-30px}
+    20% {top:-60px}
+    29.999% {top:-60px}
+    30% {top:-90px}
+    39.999% {top:-90px}
+    40% {top:-120px}
+    49.999% {top:-120px}
+    50% {top:-150px}
+    59.999% {top:-150px}
+    60% {top:-180px}
+    69.999% {top:-180px}
+    70% {top:-210px}
+    79.999% {top:-210px}
+    80% {top:-240px}
+    89.999% {top:-240px}
+    90% {top:-270px}
+    99.999% {top:-270px}
+    100% {top:-300px;}
+}
+@-moz-keyframes timerHour
+{
+    0% {top:0}
+    9.9999% {top:0}
+    10% {top:-30px}
+    19.9999% {top:-30px}
+    20% {top:-60px}
+    29.9999% {top:-60px}
+    30% {top:-90px}
+    39.9999% {top:-90px}
+    40% {top:-120px}
+    49.9999% {top:-120px}
+    50% {top:-150px}
+    59.9999% {top:-150px}
+    60% {top:-180px}
+    69.9999% {top:-180px}
+    70% {top:-210px}
+    79.9999% {top:-210px}
+    80% {top:-240px}
+    89.9999% {top:-240px}
+    90% {top:-270px}
+    99.9999% {top:-270px}
+    100% {top:-300px;}
+}
+@-moz-keyframes timertenHour
+{
+    0% {top:0}
+    9.99999% {top:0}
+    10% {top:-30px}
+    19.99999% {top:-30px}
+    20% {top:-60px}
+    29.99999% {top:-60px}
+    30% {top:-90px}
+    39.99999% {top:-90px}
+    40% {top:-120px}
+    49.99999% {top:-120px}
+    50% {top:-150px}
+    59.99999% {top:-150px}
+    60% {top:-180px}
+    69.99999% {top:-180px}
+    70% {top:-210px}
+    79.99999% {top:-210px}
+    80% {top:-240px}
+    89.99999% {top:-240px}
+    90% {top:-270px}
+    99.99999% {top:-270px}
+    100% {top:-300px;}
+}
+@-moz-keyframes timerArrow
+{
+    0% {-moz-transform: rotate(0deg)}
+    100% {-moz-transform: rotate(360deg)}
+}
+@-o-keyframes timer
+{
+    0% {top:0}
+    9% {top:0}
+    10% {top:-30px}
+    19% {top:-30px}
+    20% {top:-60px}
+    29% {top:-60px}
+    30% {top:-90px}
+    39% {top:-90px}
+    40% {top:-120px}
+    49% {top:-120px}
+    50% {top:-150px}
+    59% {top:-150px}
+    60% {top:-180px}
+    69% {top:-180px}
+    70% {top:-210px}
+    79% {top:-210px}
+    80% {top:-240px}
+    89% {top:-240px}
+    90% {top:-270px}
+    99% {top:-270px}
+    100% {top:-300px;}
+}
+@-o-keyframes timertenSec
+{
+    0% {top:0}
+    9.9% {top:0}
+    10% {top:-30px}
+    19.9% {top:-30px}
+    20% {top:-60px}
+    29.9% {top:-60px}
+    30% {top:-90px}
+    39.9% {top:-90px}
+    40% {top:-120px}
+    49.9% {top:-120px}
+    50% {top:-150px}
+    59.9% {top:-150px}
+    60% {top:-180px}
+    69.9% {top:-180px}
+    70% {top:-210px}
+    79.9% {top:-210px}
+    80% {top:-240px}
+    89.9% {top:-240px}
+    90% {top:-270px}
+    99.9% {top:-270px}
+    100% {top:-300px;}
+}
+@-o-keyframes timerMin
+{
+    0% {top:0}
+    9.99% {top:0}
+    10% {top:-30px}
+    19.99% {top:-30px}
+    20% {top:-60px}
+    29.99% {top:-60px}
+    30% {top:-90px}
+    39.99% {top:-90px}
+    40% {top:-120px}
+    49.99% {top:-120px}
+    50% {top:-150px}
+    59.99% {top:-150px}
+    60% {top:-180px}
+    69.99% {top:-180px}
+    70% {top:-210px}
+    79.99% {top:-210px}
+    80% {top:-240px}
+    89.99% {top:-240px}
+    90% {top:-270px}
+    99.99% {top:-270px}
+    100% {top:-300px;}
+}
+@-o-keyframes timertenMin
+{
+    0% {top:0}
+    9.999% {top:0}
+    10% {top:-30px}
+    19.999% {top:-30px}
+    20% {top:-60px}
+    29.999% {top:-60px}
+    30% {top:-90px}
+    39.999% {top:-90px}
+    40% {top:-120px}
+    49.999% {top:-120px}
+    50% {top:-150px}
+    59.999% {top:-150px}
+    60% {top:-180px}
+    69.999% {top:-180px}
+    70% {top:-210px}
+    79.999% {top:-210px}
+    80% {top:-240px}
+    89.999% {top:-240px}
+    90% {top:-270px}
+    99.999% {top:-270px}
+    100% {top:-300px;}
+}
+@-o-keyframes timerHour
+{
+    0% {top:0}
+    9.9999% {top:0}
+    10% {top:-30px}
+    19.9999% {top:-30px}
+    20% {top:-60px}
+    29.9999% {top:-60px}
+    30% {top:-90px}
+    39.9999% {top:-90px}
+    40% {top:-120px}
+    49.9999% {top:-120px}
+    50% {top:-150px}
+    59.9999% {top:-150px}
+    60% {top:-180px}
+    69.9999% {top:-180px}
+    70% {top:-210px}
+    79.9999% {top:-210px}
+    80% {top:-240px}
+    89.9999% {top:-240px}
+    90% {top:-270px}
+    99.9999% {top:-270px}
+    100% {top:-300px;}
+}
+@-o-keyframes timertenHour
+{
+    0% {top:0}
+    9.99999% {top:0}
+    10% {top:-30px}
+    19.99999% {top:-30px}
+    20% {top:-60px}
+    29.99999% {top:-60px}
+    30% {top:-90px}
+    39.99999% {top:-90px}
+    40% {top:-120px}
+    49.99999% {top:-120px}
+    50% {top:-150px}
+    59.99999% {top:-150px}
+    60% {top:-180px}
+    69.99999% {top:-180px}
+    70% {top:-210px}
+    79.99999% {top:-210px}
+    80% {top:-240px}
+    89.99999% {top:-240px}
+    90% {top:-270px}
+    99.99999% {top:-270px}
+    100% {top:-300px;}
+}
+@-o-keyframes timerArrow
+{
+    0% {-o-transform: rotate(0deg)}
+    100% {-o-transform: rotate(360deg)}
+}
+@-ms-keyframes timer
+{
+    0% {top:0}
+    9% {top:0}
+    10% {top:-30px}
+    19% {top:-30px}
+    20% {top:-60px}
+    29% {top:-60px}
+    30% {top:-90px}
+    39% {top:-90px}
+    40% {top:-120px}
+    49% {top:-120px}
+    50% {top:-150px}
+    59% {top:-150px}
+    60% {top:-180px}
+    69% {top:-180px}
+    70% {top:-210px}
+    79% {top:-210px}
+    80% {top:-240px}
+    89% {top:-240px}
+    90% {top:-270px}
+    99% {top:-270px}
+    100% {top:-300px;}
+}
+@-ms-keyframes timertenSec
+{
+    0% {top:0}
+    9.9% {top:0}
+    10% {top:-30px}
+    19.9% {top:-30px}
+    20% {top:-60px}
+    29.9% {top:-60px}
+    30% {top:-90px}
+    39.9% {top:-90px}
+    40% {top:-120px}
+    49.9% {top:-120px}
+    50% {top:-150px}
+    59.9% {top:-150px}
+    60% {top:-180px}
+    69.9% {top:-180px}
+    70% {top:-210px}
+    79.9% {top:-210px}
+    80% {top:-240px}
+    89.9% {top:-240px}
+    90% {top:-270px}
+    99.9% {top:-270px}
+    100% {top:-300px;}
+}
+@-ms-keyframes timerMin
+{
+    0% {top:0}
+    9.99% {top:0}
+    10% {top:-30px}
+    19.99% {top:-30px}
+    20% {top:-60px}
+    29.99% {top:-60px}
+    30% {top:-90px}
+    39.99% {top:-90px}
+    40% {top:-120px}
+    49.99% {top:-120px}
+    50% {top:-150px}
+    59.99% {top:-150px}
+    60% {top:-180px}
+    69.99% {top:-180px}
+    70% {top:-210px}
+    79.99% {top:-210px}
+    80% {top:-240px}
+    89.99% {top:-240px}
+    90% {top:-270px}
+    99.99% {top:-270px}
+    100% {top:-300px;}
+}
+@-ms-keyframes timertenMin
+{
+    0% {top:0}
+    9.999% {top:0}
+    10% {top:-30px}
+    19.999% {top:-30px}
+    20% {top:-60px}
+    29.999% {top:-60px}
+    30% {top:-90px}
+    39.999% {top:-90px}
+    40% {top:-120px}
+    49.999% {top:-120px}
+    50% {top:-150px}
+    59.999% {top:-150px}
+    60% {top:-180px}
+    69.999% {top:-180px}
+    70% {top:-210px}
+    79.999% {top:-210px}
+    80% {top:-240px}
+    89.999% {top:-240px}
+    90% {top:-270px}
+    99.999% {top:-270px}
+    100% {top:-300px;}
+}
+@-ms-keyframes timerHour
+{
+    0% {top:0}
+    9.9999% {top:0}
+    10% {top:-30px}
+    19.9999% {top:-30px}
+    20% {top:-60px}
+    29.9999% {top:-60px}
+    30% {top:-90px}
+    39.9999% {top:-90px}
+    40% {top:-120px}
+    49.9999% {top:-120px}
+    50% {top:-150px}
+    59.9999% {top:-150px}
+    60% {top:-180px}
+    69.9999% {top:-180px}
+    70% {top:-210px}
+    79.9999% {top:-210px}
+    80% {top:-240px}
+    89.9999% {top:-240px}
+    90% {top:-270px}
+    99.9999% {top:-270px}
+    100% {top:-300px;}
+}
+@-ms-keyframes timertenHour
+{
+    0% {top:0}
+    9.99999% {top:0}
+    10% {top:-30px}
+    19.99999% {top:-30px}
+    20% {top:-60px}
+    29.99999% {top:-60px}
+    30% {top:-90px}
+    39.99999% {top:-90px}
+    40% {top:-120px}
+    49.99999% {top:-120px}
+    50% {top:-150px}
+    59.99999% {top:-150px}
+    60% {top:-180px}
+    69.99999% {top:-180px}
+    70% {top:-210px}
+    79.99999% {top:-210px}
+    80% {top:-240px}
+    89.99999% {top:-240px}
+    90% {top:-270px}
+    99.99999% {top:-270px}
+    100% {top:-300px;}
+}
+@-ms-keyframes timerArrow
+{
+    0% {-ms-transform: rotate(0deg)}
+    100% {-ms-transform: rotate(360deg)}
+}
+@-webkit-keyframes timer
+{
+    0% {top:0}
+    9% {top:0}
+    10% {top:-30px}
+    19% {top:-30px}
+    20% {top:-60px}
+    29% {top:-60px}
+    30% {top:-90px}
+    39% {top:-90px}
+    40% {top:-120px}
+    49% {top:-120px}
+    50% {top:-150px}
+    59% {top:-150px}
+    60% {top:-180px}
+    69% {top:-180px}
+    70% {top:-210px}
+    79% {top:-210px}
+    80% {top:-240px}
+    89% {top:-240px}
+    90% {top:-270px}
+    99% {top:-270px}
+    100% {top:-300px;}
+}
+@-webkit-keyframes timertenSec
+{
+    0% {top:0}
+    9.9% {top:0}
+    10% {top:-30px}
+    19.9% {top:-30px}
+    20% {top:-60px}
+    29.9% {top:-60px}
+    30% {top:-90px}
+    39.9% {top:-90px}
+    40% {top:-120px}
+    49.9% {top:-120px}
+    50% {top:-150px}
+    59.9% {top:-150px}
+    60% {top:-180px}
+    69.9% {top:-180px}
+    70% {top:-210px}
+    79.9% {top:-210px}
+    80% {top:-240px}
+    89.9% {top:-240px}
+    90% {top:-270px}
+    99.9% {top:-270px}
+    100% {top:-300px;}
+}
+@-webkit-keyframes timerMin
+{
+    0% {top:0}
+    9.99% {top:0}
+    10% {top:-30px}
+    19.99% {top:-30px}
+    20% {top:-60px}
+    29.99% {top:-60px}
+    30% {top:-90px}
+    39.99% {top:-90px}
+    40% {top:-120px}
+    49.99% {top:-120px}
+    50% {top:-150px}
+    59.99% {top:-150px}
+    60% {top:-180px}
+    69.99% {top:-180px}
+    70% {top:-210px}
+    79.99% {top:-210px}
+    80% {top:-240px}
+    89.99% {top:-240px}
+    90% {top:-270px}
+    99.99% {top:-270px}
+    100% {top:-300px;}
+}
+@-webkit-keyframes timertenMin
+{
+    0% {top:0}
+    9.999% {top:0}
+    10% {top:-30px}
+    19.999% {top:-30px}
+    20% {top:-60px}
+    29.999% {top:-60px}
+    30% {top:-90px}
+    39.999% {top:-90px}
+    40% {top:-120px}
+    49.999% {top:-120px}
+    50% {top:-150px}
+    59.999% {top:-150px}
+    60% {top:-180px}
+    69.999% {top:-180px}
+    70% {top:-210px}
+    79.999% {top:-210px}
+    80% {top:-240px}
+    89.999% {top:-240px}
+    90% {top:-270px}
+    99.999% {top:-270px}
+    100% {top:-300px;}
+}
+@-webkit-keyframes timerHour
+{
+    0% {top:0}
+    9.9999% {top:0}
+    10% {top:-30px}
+    19.9999% {top:-30px}
+    20% {top:-60px}
+    29.9999% {top:-60px}
+    30% {top:-90px}
+    39.9999% {top:-90px}
+    40% {top:-120px}
+    49.9999% {top:-120px}
+    50% {top:-150px}
+    59.9999% {top:-150px}
+    60% {top:-180px}
+    69.9999% {top:-180px}
+    70% {top:-210px}
+    79.9999% {top:-210px}
+    80% {top:-240px}
+    89.9999% {top:-240px}
+    90% {top:-270px}
+    99.9999% {top:-270px}
+    100% {top:-300px;}
+}
+@-webkit-keyframes timertenHour
+{
+    0% {top:0}
+    9.99999% {top:0}
+    10% {top:-30px}
+    19.99999% {top:-30px}
+    20% {top:-60px}
+    29.99999% {top:-60px}
+    30% {top:-90px}
+    39.99999% {top:-90px}
+    40% {top:-120px}
+    49.99999% {top:-120px}
+    50% {top:-150px}
+    59.99999% {top:-150px}
+    60% {top:-180px}
+    69.99999% {top:-180px}
+    70% {top:-210px}
+    79.99999% {top:-210px}
+    80% {top:-240px}
+    89.99999% {top:-240px}
+    90% {top:-270px}
+    99.99999% {top:-270px}
+    100% {top:-300px;}
+}
+@-webkit-keyframes timerArrow
+{
+    0% {-webkit-transform: rotate(0deg)}
+    100% {-webkit-transform: rotate(360deg)}
+}
+
+/* control buttons */
+
+.start:target ~ .timerInner .numb, .pause:target ~ .timerInner .numb
+{
+   animation-name: timer;
+}
+.start:target ~ .timerInner .numb.sec, .pause:target ~ .timerInner .numb.sec
+{
+   animation-name: timer;
+   
+}
+.start:target ~ .timerInner .numb.tenSec, .pause:target ~ .timerInner .numb.tenSec
+{
+   animation-name: timertenSec;
+   
+}
+.start:target ~ .timerInner .numb.min, .pause:target ~ .timerInner .numb.min
+{
+   animation-name: timerMin;
+}
+.start:target ~ .timerInner .numb.tenMin, .pause:target ~ .timerInner .numb.tenMin
+{
+   animation-name: timertenMin;
+}
+.start:target ~ .timerInner .numb.hour, .pause:target ~ .timerInner .numb.hour
+{
+   animation-name: timerHour;
+}
+.start:target ~ .timerInner .numb.tenHour, .pause:target ~ .timerInner .numb.tenHour
+{
+   animation-name: timertenHour;
+   
+}
+.start:target ~ .timerInner .arrow, .pause:target ~ .timerInner .arrow
+{
+   animation-name: timerArrow;
+}
+
+.pause:target ~ .timerInner .tenHour,
+.pause:target ~ .timerInner .hour,
+.pause:target ~ .timerInner .tenMin,
+.pause:target ~ .timerInner .min,
+.pause:target ~ .timerInner .tenSec,
+.pause:target ~ .timerInner .sec,
+.pause:target ~ .timerInner .tenMilisec,
+.pause:target ~ .timerInner .milisec,
+.pause:target ~ .timerInner .arrow
+{
+    animation-play-state: paused;
+}
+.stop:target ~ .timer .tenHour,
+.stop:target ~ .timer .hour,
+.stop:target ~ .timer .tenMin,
+.stop:target ~ .timer .min,
+.stop:target ~ .timer .tenSec,
+.stop:target ~ .timer .sec,
+.stop:target ~ .timer .tenMilisec,
+.stop:target ~ .timer .milisec
+{
+   animation-name: reset;
+}
+     </style>
+</head>
+
+<body>
+     <div class="timerBody">
+        <div class="timerFront">
+            <a class="start" id="start" href="#start"></a>
+            <a class="pause" id="pause" href="#pause"></a>
+            <a class="stop" id="stop" href="#stop"></a>
+            <div class="timerInner">
+                <div class="timerFace">
+                    <div class="clock">
+                        <div class="line one"></div>
+                        <div class="line two"></div>
+                        <div class="line three"></div>
+                        <div class="line four"></div>
+                        <div class="line five"></div>
+                        <div class="line sixt"></div>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="timer">
+                        <div class="numb tenHour">
+                        </div>
+                        <div class="numb hour">
+                        </div>
+                        <div class="numb tenMin">
+                        </div>
+                        <div class="numb min">
+                        </div>
+                        <div class="numb tenSec">
+                        </div>
+                        <div class="numb sec">
+                        </div>
+                        <div>
+                            :</div>
+                        <div class="numb tenMilisec">
+                        </div>
+                        <div class="numb milisec">
+                        </div>
+                    </div>
+                </div>
+                <div class="timerStek">
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+</html>
